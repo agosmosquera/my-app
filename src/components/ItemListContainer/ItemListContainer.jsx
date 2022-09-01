@@ -2,6 +2,7 @@ import React from 'react'
 import { FcMoneyTransfer } from 'react-icons/fc';
 import {Counter} from '../ItemCount/Counter'
 import swal from 'sweetalert';
+import Productos from '../ItemList/ItemList';
 
 export const ItemListContainer = ({title}) => {
     
@@ -9,12 +10,17 @@ export const ItemListContainer = ({title}) => {
       swal( '¡Agregado al carrito!', 'Se han seleccionado ' + count + ' productos', 'success' )
     }
     return (
-    <div>
-      <h1>{title}</h1>
-    <FcMoneyTransfer className='money'/>
-    <div>
-      <Counter stock={5} onAdd={onAdd}/>
-    </div>
-    </div>
+        <div>
+          <h1>{title}</h1>
+          <FcMoneyTransfer className='money'/>
+        <div>
+        <Counter stock={5} onAdd={onAdd}/>
+        </div>
+        <div>
+        < Productos/>
+      </div>
+      </div>
+     
+    
   )
 }

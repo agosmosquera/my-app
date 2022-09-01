@@ -1,3 +1,6 @@
 .mi-card {
     max-width: 20rem;
 }
+.misBotones{
+    align-items:flex-end;
+}

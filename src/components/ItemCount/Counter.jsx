@@ -10,12 +10,12 @@ return (
         <h1 className='card-header'> Counter</h1>
         <p>Stock: {stock}</p>
         <p>Cantidad: {count}</p>
-        <div>
+        <div className='card-body'>
             <button  className='btn btn-light' onClick={substract}>-</button>
             <button  className='btn btn-secondary' onClick={reset}>Reset</button>
             <button  className='btn btn-light' onClick={add}>+</button>
         </div>
-        <div>
+        <div className='card-text'>
             <button className='btn btn-info' onClick={() => onAdd(count)}>Confirmar</button>
         </div>
     </div>

@@ -15,15 +15,8 @@ const [cont, setCont] = useState(0);
     <div className="App">
     <NavBar />
     <ItemListContainer title="Este es mi Ecommerce"  />
-    {/* <p>
-      Contador: {cont}
-    </p>
-    <button className='btn btn-primary' onClick={() => setCont(cont + 1)}>
-       + 
-    </button>
-    <button className='btn btn-secondary' onClick={() => setCont(cont - 1)}>
-      -
-    </button> */}
+    
+    
     </div>
   );
   
