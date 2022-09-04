@@ -1,26 +1,26 @@
-import React from 'react'
-import { FcMoneyTransfer } from 'react-icons/fc';
-import {Counter} from '../ItemCount/Counter'
-import swal from 'sweetalert';
-import Productos from '../ItemList/ItemList';
+import {React, useState, useEffect} from 'react';
+import {ItemList} from '../ItemList/ItemList';
+import {productos} from '../../data/productos'
 
-export const ItemListContainer = ({title}) => {
-    
-  function onAdd(count){
-      swal( '¡Agregado al carrito!', 'Se han seleccionado ' + count + ' productos', 'success' )
-    }
-    return (
-        <div>
-          <h1>{title}</h1>
-          <FcMoneyTransfer className='money'/>
-        <div>
-        <Counter stock={5} onAdd={onAdd}/>
-        </div>
-        <div>
-        < Productos/>
-      </div>
-      </div>
-     
+
+
+export const ItemListContainer = () => {
+  const [productosList, setProductosList] = useState([]);
+
+  const getProducts= () => new Promise( (res,rej) => {setTimeout(()=>{
+    res(productos)
+}, 2000);})
+
+  
+  useEffect (() => {
+    getProducts()
+    .then(data => setProductosList(productos))
+    .catch(error => {
+      console.error(error)
+  })
+  }, [])
+  return (
+    <ItemList productList={productosList}/>
     
   )
 }
