@@ -7,6 +7,7 @@ import Dolar from './components/ApiDolar/Dolar';
 import Home from './components/Home/Home';
 import Contacto from './components/Contacto/Contacto';
 import About from './components/About/About';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -18,6 +19,8 @@ const [cont, setCont] = useState(0);
     <div className="App">
     <NavBar />
     <ItemListContainer  />
+    <ItemDetailContainer/>
+
     {/* <Dolar /> */}
 
   {/* aca comienza el borrador de routing */}

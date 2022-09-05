@@ -5,6 +5,7 @@ import {productos} from '../../data/productos'
 export const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({})
+    const [isLoading, setIsLoading] = useState([true]);
 
     const getProduct = () => new Promise((res, rej) => {
         setTimeout(() =>res(productos.find(producto => producto.id === 1)), 2000)
@@ -12,11 +13,14 @@ export const ItemDetailContainer = () => {
 
     useEffect (() => {
         getProduct()
-        .then (res => setItem(res))
+        .then (data => {
+            setItem(data)
+            setIsLoading(false);
+        })
     }, [])
 
     return (
-    <div><ItemDetail item={item}/></div>
+        isLoading ? <h2>Cargando...</h2> : <div><ItemDetail item={item}/></div>
   )
 }
 

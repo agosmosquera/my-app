@@ -7,7 +7,7 @@ export const ItemList = ({productList}) => {
     <div style={{display: 'flex', gap: '2rem'}}> 
     {/* luego modifico el style y lo agrego a un css */}
         {
-            productList.map((producto, id) => <Item key ={producto.id} img={producto.img} title= {producto.nombre} marca={producto.marca} stock = {producto.stock} precio= {producto.precio} />)
+            productList.map((producto, id) => <Item key ={producto.id} img={producto.img} nombre= {producto.nombre} marca={producto.marca} stock = {producto.stock} precio= {producto.precio} />)
         }
         </div>
   )
