@@ -1,13 +1,13 @@
 import React from 'react'
 
-const About = () => {
+const Alimentos = () => {
   return (
     <>
         <h1>
-        Nosotros
+        Alimentos
         </h1>
     </>
   )
 }
 
-export default About
+export default Alimentos
