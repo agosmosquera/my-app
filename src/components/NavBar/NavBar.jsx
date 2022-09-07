@@ -1,28 +1,41 @@
  import { CartWidget } from '../CartWidget/CartWidget';
+ import './NavBar.css';
+ import { Link } from 'react-router-dom';
+ 
  export const NavBar = (props) =>{
    return(
- <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+ <nav className="navbar navbar-expand-lg navbar-dark bg-primary maxWidthh">
    <div className="container-fluid">
-     <a className="navbar-brand" href="#">Despensa Punto Sur</a>
+   <Link to='/' className="nav-link navbar-brand">
+         <li className="nav-item">
+           Despensa Punto Sur
+         </li>
+         </Link>
      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
        <span className="navbar-toggler-icon" />
      </button>
      <div className="collapse navbar-collapse" id="navbarColor01">
        <ul className="navbar-nav me-auto">
+         <Link to='/' className="nav-link">
          <li className="nav-item">
-           <a className="nav-link active" href="#">Inicio
-             <span className="visually-hidden">(current)</span>
-           </a>
+           Inicio
          </li>
+         </Link>
+         <Link to='/categoria/bebidas' className="nav-link">
          <li className="nav-item">
-           <a className="nav-link" href="#">Bebidas</a>
+           Bebidas
          </li>
+         </Link>
+         <Link to='/categoria/alimentos' className="nav-link">
          <li className="nav-item">
-           <a className="nav-link" href="#">Alimentos</a>
+           Alimentos
          </li>
+         </Link>
+         <Link to='/categoria/frutasyverduras' className="nav-link">
          <li className="nav-item">
-          <a className="nav-link" href="#">Frutas y verturas</a>
+          Frutas y verturas
          </li>
+         </Link>
       
       </ul>
        <CartWidget/>

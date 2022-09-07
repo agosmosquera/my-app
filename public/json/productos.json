@@ -1,0 +1,7 @@
+[
+    { "nombre": "Fideos", "marca": "Luchet", "categoria": "alimentos", "precio": 150, "id": 1, "stock": 20, "img": "fideos.jpg", "descripcion": "Los fideos mas ricos del mundo, 500 grs." },
+    { "nombre": "Arroz", "marca": "Mandisovi","categoria": "alimentos", "precio": 130, "id": 2, "stock": 30, "img": "arroz.jpg", "descripcion": "El arroz mas rico del mndo, 1kg." },
+    { "nombre": "Galletas", "marca": "Bagley","categoria": "alimentos", "precio": 310, "id": 3, "stock": 40, "img": "galletas.jpg", "descripcion": "Las galletas mas ricas del mundo, 500 grs." },
+    { "nombre": "Gaseosa", "marca": "Pepsi","categoria": "bebidas", "precio": 290, "id": 4, "stock": 50, "img": "coca.jpg", "descripcion": "La gaseosa mas rica del mundo, 2 litros." },
+    { "nombre": "Peras", "marca": "Fruta","categoria": "frutasyverduras", "precio": 120, "id": 5, "stock": 10, "img": "peras.jpg", "descripcion": "Peras mas ricas, se venden por medio kilo como minimo." }
+]

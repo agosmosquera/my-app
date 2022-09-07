@@ -1,31 +1,38 @@
 import {React, useState, useEffect} from 'react';
 import {ItemDetail} from '../ItemDetail/ItemDetail';
-import {productos} from '../../data/productos';
-import { useParams} from 'react';
+import { useParams} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const ItemDetailContainer = () => {
 
+    const [producto, setproductoCard] = useState({})
     const {id} = useParams()
-    
-    const [item, setItem] = useState({})
     const [isLoading, setIsLoading] = useState([true]);
-
-    const getProduct = () => new Promise((res, rej) => {
-        setTimeout(() =>res(productos.find(producto => producto.id === Number(id))), 2000)
+    const getProduct =() => new Promise((resolve, reject) => {
+      setTimeout(() => resolve(producto.find(producto =>producto.id ===Number(id))), 2000)
     })
-
-    useEffect (() => {
+    useEffect(() => {
+        fetch("../json/productos.json")
         getProduct()
-        .then (data => {
-            setItem(data)
-            setIsLoading(false);
+        .then(response => response.json())
+        .then (response => {
+          setproductoCard(response)
+          setIsLoading(false);
         })
         .catch(error => {
             console.error(error)})
-    }, [])
+    }, [id])
+    
 
     return (
-        isLoading ? <h2>Cargando...</h2> : <div><ItemDetail item={item}/></div>
+      <>
+      {
+
+       isLoading ? <h2>Cargando...</h2> : <ItemDetail item={producto}/>
+      
+      }
+      </>
+
   )
 }
 
