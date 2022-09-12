@@ -33,7 +33,7 @@
          </Link>
          <Link to='/categoria/frutasyverduras' className="nav-link">
          <li className="nav-item">
-          Frutas y verturas
+          Frutas y verduras
          </li>
          </Link>
       

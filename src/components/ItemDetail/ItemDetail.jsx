@@ -1,26 +1,14 @@
 import React from 'react'
-import {Counter} from '../ItemCount/Counter'
-import swal from 'sweetalert';
+import  {ItemDetalle}  from '../ItemDetalle/ItemDetalle'
 
-
-export const ItemDetail = (producto) => {
-    function onAdd(count){
-        swal( '¡Agregado al carrito!', 'Se han seleccionado ' + count + ' productos', 'success' )
-      }
+export const ItemDetail = ({producto}) => {
   return (
-    <div>
-        <div className="card bg-light mb-3" key={producto.id} style={{maxWidth: '15rem', margin: '5px'}}>
-                                 <div className="card-header" >{producto.nombre}</div>
-                                     <div className="card-body">
-                                     <img src={producto.img} alt={producto.nombre} width="100%" height="200"/>
-                                     <p className="card-text">Marca: {producto.marca}</p>
-                                     <p className="card-text">Precio: ${producto.precio}</p>
-                                     <p className="card-text">Descripcion: {producto.descripcion}</p>
-                                  </div>
-                                  <div>
-                                     <Counter stock={producto.stock} onAdd={onAdd}/>
-                                 </div>
-                             </div>
-    </div>
+  
+    <div style={{display: 'flex', gap: '2rem'}}> 
+    {/* luego modifico el style y lo agrego a un css */}
+        {
+            producto.map(producto => <ItemDetalle key ={producto.id} id ={producto.id} categoria ={producto.categoria} img={producto.img} nombre= {producto.nombre} marca={producto.marca} stock = {producto.stock} precio= {producto.precio} productList={producto} />)
+        }
+        </div>
   )
 }

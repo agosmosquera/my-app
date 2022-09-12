@@ -9,11 +9,11 @@ export const ItemDetailContainer = () => {
     const {id} = useParams()
     const [isLoading, setIsLoading] = useState([true]);
     const getProduct =() => new Promise((resolve, reject) => {
-      setTimeout(() => resolve(producto.find(producto =>producto.id ===Number(id))), 2000)
+      setTimeout(() => resolve(producto.find(producto =>producto.id === Number(id))), 2000)
     })
     useEffect(() => {
-        fetch("../json/productos.json")
-        getProduct()
+      getProduct()
+      fetch("../json/productos.json")
         .then(response => response.json())
         .then (response => {setTimeout(()=>{
           setproductoCard(response)
