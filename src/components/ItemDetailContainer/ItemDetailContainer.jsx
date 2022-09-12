@@ -1,7 +1,7 @@
 import {React, useState, useEffect} from 'react';
 import {ItemDetail} from '../ItemDetail/ItemDetail';
 import { useParams} from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 
 export const ItemDetailContainer = () => {
 
@@ -9,30 +9,25 @@ export const ItemDetailContainer = () => {
     const {id} = useParams()
     const [isLoading, setIsLoading] = useState([true]);
     const getProduct =() => new Promise((resolve, reject) => {
-      setTimeout(() => resolve(producto.find(producto =>producto.id ===Number(id))), 2000)
+      setTimeout(() => resolve(producto.find(producto =>producto.id ===Number(id))), 200)
     })
     useEffect(() => {
         fetch("../json/productos.json")
         getProduct()
         .then(response => response.json())
-        .then (response => {
+        .then (response => {setTimeout(()=>{
           setproductoCard(response)
           setIsLoading(false);
-        })
+      }, 200)})
         .catch(error => {
             console.error(error)})
     }, [id])
     
 
     return (
-      <>
-      {
-
-       isLoading ? <h2>Cargando...</h2> : <ItemDetail item={producto}/>
-      
-      }
-      </>
-
-  )
+      isLoading ? <h2>Cargando...</h2> : <div>
+        <ItemDetail item={producto}/> 
+    </div>
+        )
 }
 
