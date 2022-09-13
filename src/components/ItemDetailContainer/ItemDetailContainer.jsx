@@ -7,9 +7,13 @@ export const ItemDetailContainer = () => {
 
     const [producto, setproductoCard] = useState({})
     const {id} = useParams()
-    const [isLoading, setIsLoading] = useState([true]);
+    const [isLoading, setIsLoading] = useState(true);
     const getProduct =() => new Promise((resolve, reject) => {
-      setTimeout(() => resolve(producto.find(producto =>producto.id === Number(id))), 2000)
+      if (id) {
+        setTimeout(() => {
+          resolve(producto.find(producto =>producto.id === Number(id)))}, 2000)} else {
+            setTimeout(()=>resolve(resolve), 2000)
+}
     })
     useEffect(() => {
       getProduct()
@@ -26,7 +30,7 @@ export const ItemDetailContainer = () => {
 
     return (
       isLoading ? <h2>Cargando...</h2> : <div>
-        <ItemDetail item={producto}/> 
+        <ItemDetail item={setproductoCard}/> 
     </div>
         )
 }
