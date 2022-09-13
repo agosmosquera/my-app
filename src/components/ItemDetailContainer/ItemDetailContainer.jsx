@@ -9,12 +9,14 @@ export const ItemDetailContainer = () => {
     const {id} = useParams()
     const [isLoading, setIsLoading] = useState(true);
     const getProduct =() => new Promise((resolve, reject) => {
-      if (id) {
-        setTimeout(() => {
-          resolve(producto.find(producto =>producto.id === Number(id)))}, 2000)} else {
-            setTimeout(()=>resolve(resolve), 2000)
-}
-    })
+      setTimeout(() => resolve(producto.find(producto =>producto.id ===Number(id))), 2000)
+      })
+//       if (id) {
+//         setTimeout(() => {
+//           resolve(producto.find(producto =>producto.id === Number(id)))}, 2000)} else {
+//             setTimeout(()=>resolve(resolve), 2000)
+// }
+    
     useEffect(() => {
       getProduct()
       fetch("../json/productos.json")
@@ -30,7 +32,7 @@ export const ItemDetailContainer = () => {
 
     return (
       isLoading ? <h2>Cargando...</h2> : <div>
-        <ItemDetail item={setproductoCard}/> 
+        <ItemDetail item={producto}/> 
     </div>
         )
 }
