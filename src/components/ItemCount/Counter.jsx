@@ -2,11 +2,13 @@ import {useState} from 'react'
 import useCounter from './useCounter'
 import './counter.css';
 import { ItemDetalle } from '../ItemDetalle/ItemDetalle';
+import swal from 'sweetalert';
 
 export const Counter = ({stock, onAdd, producto}) => {
     const {add, substract, reset, count} = useCounter(stock)
     function agregarAlCarrito(producto, cantidad) {
         const productoCarrito = {id: producto.id, cantidad: count}
+        swal( '¡Agregado al carrito!', 'Se han seleccionado ' + count + ' productos', 'success')
         console.log(productoCarrito)
     }
 return (
