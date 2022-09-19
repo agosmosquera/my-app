@@ -1,15 +1,16 @@
  import { CartWidget } from '../CartWidget/CartWidget';
  import './NavBar.css';
  import { Link } from 'react-router-dom';
+ import { CarritoContext } from '../Context/CarritoContext';
+ import {useContext} from 'react'
  
  export const NavBar = (props) =>{
-   return(
+  const {cantidadArticulosCarrito} = useContext(CarritoContext);
+   return (
  <nav className="navbar navbar-expand-lg navbar-dark bg-primary maxWidthh">
    <div className="container-fluid">
    <Link to='/' className="nav-link navbar-brand">
-         <li className="nav-item">
            Despensa Punto Sur
-         </li>
          </Link>
      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
        <span className="navbar-toggler-icon" />
@@ -38,7 +39,12 @@
          </Link>
       
       </ul>
-       <CartWidget/>
+      {cantidadArticulosCarrito() > 0 && ( <CartWidget/>) }
+      {/* <Link to='/cart' className="nav-link">
+         
+         <CartWidget/>
+         
+         </Link> */}
        <form className="d-flex">
          <input className="form-control me-sm-2" type="text" placeholder="Buscar producto" />
          <button className="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>

@@ -1,8 +1,14 @@
-import React from 'react'
+import {React, useState, useContext} from 'react'
 import {Counter} from '../ItemCount/Counter'
 import swal from 'sweetalert';
+import {CarritoContext} from '../Context/CarritoContext';
 export const ItemDetalle = (producto) => {
+  const {agregarProductoCarrito} = useContext(CarritoContext);
+  const [compra, setCompra] = useState(false)
     function onAdd(count){
+      setCompra(true);
+      producto.stock = producto.stock - count;
+      agregarProductoCarrito(producto, count);
         swal( '¡Agregado al carrito!', 'Se han seleccionado ' + count + ' productos', 'success' )
       }
   return (

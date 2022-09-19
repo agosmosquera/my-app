@@ -8,3 +8,7 @@
     margin: 0.2em;
    
 }
+.darkMode {
+    background-color: black;
+    color: aliceblue;
+}

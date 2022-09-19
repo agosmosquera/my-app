@@ -1,25 +1,15 @@
-import {React, useState, useEffect} from 'react';
+import {React, useState, useEffect, useContext} from 'react';
 import {ItemList} from '../ItemList/ItemList';
 import {useParams } from 'react-router-dom';
-
+// // import  {DarkModeProvider, DarkModeContext}  from './Context/DarkModeContext.jsx';
 
 
 
 export const ItemListContainer = () => {
   const [productosList, setProductosList] = useState([]);
   const [loading, setLoading] = useState([true]);
-  const {categoria} = useParams()
-  
-
-//   const getProducts= () => new Promise( (res,rej) => {
-//     if(categoria){
-//       setTimeout(()=>{
-//     res(res.filter(item=>item.categoria === categoria))
-// }, 2000)} else {
-//   setTimeout(()=>res(res), 2000)
-// }
-//     })
-
+  const {categoria} = useParams();
+  // const {darkMode, toggleDarkMode} = useContext(DarkModeContext);
   
   useEffect (() => {
     // getProducts()
@@ -34,7 +24,10 @@ export const ItemListContainer = () => {
   })
   }, [categoria])
   return (
-    loading ? <h2>Cargando...</h2> : <div>
+    loading ? <h2>Cargando...</h2> : <div >
+        {/* 
+        className={darkMode ? 'darkMode' : ''}
+        <button className='btn btn-dark' onClick={() => toggleDarkMode()}>Cambiar modo</button> */}
         <ItemList productList={productosList}/> 
     </div>
     
