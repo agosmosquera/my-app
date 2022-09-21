@@ -2,6 +2,8 @@ import React, {useContext} from 'react'
 import { BiCart } from 'react-icons/bi';
 import { CarritoContext } from "../Context/CarritoContext";
 import Button from "react-bootstrap/Button";
+import CartView from './CartView'; 
+import { Link } from 'react-router-dom';
 
 
 export const CartWidget = () => {
@@ -9,8 +11,10 @@ export const CartWidget = () => {
   return (
     <div>
       <Button >
-      <BiCart className='icon'/> 
-      {cantidadTotal()}
+                <Link className='nav-link' to={"/cart"}> 
+                <BiCart className='icon'/> 
+                {cantidadTotal()}
+                </Link>
       </Button>
       </div>
   )
