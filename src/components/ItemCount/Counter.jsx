@@ -10,6 +10,7 @@ export const Counter = ({stock, onAdd, producto}) => {
         const productoCarrito = {id: producto.id, cantidad: count}
         swal( '¡Agregado al carrito!', 'Se han seleccionado ' + count + ' productos', 'success')
         console.log(productoCarrito)
+        onAdd(count)
     }
 return (
 <div>
@@ -27,7 +28,7 @@ return (
             <button className='btn btn-info confirmar' onClick={() => onAdd(count)}>Confirmar</button>
         </div> */}
         <div className='card-text '>
-            <button className='btn btn-info confirmar' onClick={() => agregarAlCarrito(producto)}>Confirmar</button>
+            <button className='btn btn-info confirmar' onClick={() => agregarAlCarrito(producto)} >Confirmar</button>
         </div>
     </div>
 </div>
