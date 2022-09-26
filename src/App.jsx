@@ -7,14 +7,15 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import {Categoria} from './components/Categorias/Categoria';
 import Form from './components/Form/Form';
 import CartView from './components/CartWidget/CartView';
-import FinalizarCompra from './components/FinalizarCompra';
+import { CarritoProvider } from './components/Context/CarritoContext';
+
 
 function App() {
 
 const [cont, setCont] = useState(0); 
 
   return (
-    
+    <CarritoProvider>
     <BrowserRouter>
        <div className="App row" >
          <NavBar />
@@ -22,14 +23,15 @@ const [cont, setCont] = useState(0);
            <Route path='/detalles/:id' element={<ItemDetailContainer/> } />
            <Route path='/' element={<ItemListContainer/>}></Route>
            <Route path='/form' element={<Form/>}></Route>
-           <Route path='/categoria/:categoria' element={<Categoria/>}></Route> 
+           <Route path='/categoria/:categoria' element={<ItemListContainer/>}></Route> 
            <Route path='*' element={<h1>Error 404</h1>}></Route>
-           <Route path='/finalizarCompra' element={<FinalizarCompra/>}></Route> 
+           <Route path='/finalizarCompra' element={<Form/>}></Route> 
            <Route path='/cart' element={<CartView/>}></Route> 
        </Routes> 
     
      </div>
     </BrowserRouter>
+    </CarritoProvider>
        
    
   );

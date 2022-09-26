@@ -27,10 +27,10 @@ export const ItemListContainer = () => {
   const getData = async (category) => {
     try {
       setLoading(true)
-      const document = categoria?query(collection(db, "Productos"),where("categoria","==",category)):collection(db, "Productos")
+      const document = categoria ? query(collection(db, "Productos"), where("categoria","==",category))
+      : collection(db, "Productos")
       const col = await getDocs(document)
-      console.log("col.docs",col.docs)
-      const result = col.docs.map((doc) => doc ={id:doc.id,...doc.data()})
+      const result = col.docs.map((doc) => doc ={id: doc.id, ...doc.data() })
       setProductosList(result)
       setLoading(false)
     } catch (error) {

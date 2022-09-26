@@ -7,7 +7,7 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD5NPfZX8VyRQSj3jLyNt6w2H0MPm35A6M",
+  apiKey: process.env.API_KEY,
   authDomain: "despensa-punto-sur.firebaseapp.com",
   projectId: "despensa-punto-sur",
   storageBucket: "despensa-punto-sur.appspot.com",

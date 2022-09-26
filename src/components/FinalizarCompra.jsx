@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import { CarritoContext } from './Context/CarritoContext';
 import swal from 'sweetalert';
 
 const FinalizarCompra = () => {

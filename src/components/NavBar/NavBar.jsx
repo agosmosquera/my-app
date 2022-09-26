@@ -40,11 +40,7 @@
       
       </ul>
       {cantidadArticulosCarrito() > 0 && ( <CartWidget/>) }
-      {/* <Link to='/cart' className="nav-link">
-         
-         <CartWidget/>
-         
-         </Link> */}
+      
        <form className="d-flex">
          <input className="form-control me-sm-2" type="text" placeholder="Buscar producto" />
          <button className="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
