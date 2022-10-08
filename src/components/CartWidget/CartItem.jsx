@@ -7,8 +7,8 @@ const CartItem = ({item}) => {
     const {quitarProductoCarrito} = useContext(CarritoContext)
  
     return (
-        <>
-            <div className='card mb-3' style={{maxWidth: '540px'}}>
+        
+            <div className='card mb-3 row' style={{maxWidth: '500px'}}>
                 <div className='row g-0'>
                     <div className='col-md-4'>
                         <img src={item.img} className='img-fluid rounded-start' alt={item.nombre}/>
@@ -26,7 +26,7 @@ const CartItem = ({item}) => {
                 </div>
             </div>
                
-        </>
+        
     )
 }
 

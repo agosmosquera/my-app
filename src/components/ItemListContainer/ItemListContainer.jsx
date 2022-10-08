@@ -13,17 +13,7 @@ export const ItemListContainer = () => {
   const {categoria} = useParams();
   
   
-  // useEffect (() => {
-  //   fetch("../json/productos.json")
-  //   .then(response => response.json())
-  //   .then(data => {setTimeout(()=>{
-  //     setProductosList(data)
-  //     setLoading(false);
-  // }, 2000)})
-  //   .catch(error => {
-  //     console.error(error)
-  // })
-  // }, [categoria])
+
   const getData = async (category) => {
     try {
       setLoading(true)
@@ -37,19 +27,7 @@ export const ItemListContainer = () => {
       console.log(error)
     }
   }
-  // const getDataCategory = async (category) => {
-  //   try {
-  //     setLoading(true)
-  //     const document = query(collection(db, "Productos"),where("categoria","==",category))
-  //     const col = await getDocs(document)
-  //     console.log("col.docs",col.docs)
-  //     const result = col.doccs.map((doc) => doc ={id:doc.id,...doc.data()})
-  //     setProductosList(result)
-  //     setLoading(false)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
+ 
   useEffect (() => {
     getData(categoria)
   }, [categoria])

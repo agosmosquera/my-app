@@ -17,7 +17,7 @@ const [cont, setCont] = useState(0);
   return (
     <CarritoProvider>
     <BrowserRouter>
-       <div className="App row" >
+       <div className="App row max" >
          <NavBar />
           <Routes>
            <Route path='/detalles/:id' element={<ItemDetailContainer/> } />

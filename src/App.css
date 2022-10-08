@@ -12,3 +12,7 @@
     background-color: black;
     color: aliceblue;
 }
+
+.max {
+    max-width: 1920px;
+}
