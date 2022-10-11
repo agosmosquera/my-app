@@ -1,7 +1,5 @@
-import {useState} from 'react'
 import useCounter from './useCounter'
 import './counter.css';
-import { ItemDetalle } from '../ItemDetalle/ItemDetalle';
 import swal from 'sweetalert';
 
 export const Counter = ({stock, onAdd, producto}) => {

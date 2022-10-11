@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import {React} from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
 import {NavBar} from "./components/NavBar/NavBar";
@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
 
-const [cont, setCont] = useState(0); 
+ 
 
   return (
         <CarritoProvider >
@@ -22,7 +22,6 @@ const [cont, setCont] = useState(0);
           <Routes>
            <Route path='/detalles/:id' element={<ItemDetailContainer/> } />
            <Route path='/' element={<ItemListContainer/>} ></Route>
-           <Route path='/form' element={<Form/> }></Route>
            <Route path='/categoria/:categoria' element={<ItemListContainer/>}></Route> 
            <Route path='*' element={<h1>Error 404</h1>}c></Route>
            <Route path='/finalizarCompra' element={<Form/>}></Route> 
