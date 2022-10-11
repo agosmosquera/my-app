@@ -18,7 +18,6 @@ const Form = () => {
       try {
         const col = collection(db, "Orders")
         const order = await addDoc(col, data)
-        console.log("OrdenNro:", order)
         setOrderId(order.id)
         limpiar()
       } catch (error) {
@@ -38,24 +37,12 @@ const Form = () => {
       const dia = new Date() 
       const total = cantidadTotal()
       const data = {comprador, items, dia, total}
-      console.log('data', data)
       generateOrder(data)
 
     }
     
     
-    // const dataFormulario = React.useRef()
- 
-    // function consultarForm(e) {
-    //     e.preventDefault()
-    //     const formData = new FormData(dataFormulario.current)
-    //         console.log(Object.fromEntries(formData))
-    // }
-
-    // function cambioInputs(e){
-    //         const {value} = e.target
-    // }
-
+   
 
     return (
         <>
@@ -89,20 +76,6 @@ const Form = () => {
               />
               <button type="submit" className="btn btn-primary input">Finalizar compra</button>
               </form> </div>  : <h2 className='ancho' >Su orden de compra es: {orderId} </h2> }
-         {/*   <form onSubmit={consultarForm} ref={dataFormulario}>
-         <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email</label>
-          <input type="email" className="form-control" id="email" name='email'/>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="usuario" className="form-label">Nombre y apellido</label>
-          <input type="text" className="form-control" id="user" name='user'/>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="number" className="form-label">Telefono</label>
-          <input type="number" className="form-control" id="telephone" name='telephone'/>
-        </div> 
-      </form> */}
         </>
     );
 }

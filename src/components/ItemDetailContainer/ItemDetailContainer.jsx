@@ -10,19 +10,6 @@ export const ItemDetailContainer = () => {
     const [producto, setproductoCard] = useState()
     const {id} = useParams()
     const [isLoading, setIsLoading] = useState(true);
-    
-    
-    // useEffect(() => {
-    //   // getProduct()
-    //   fetch("../json/productos.json")
-    //     .then(response => response.json())
-    //     .then (response => {setTimeout(()=>{
-    //       setproductoCard(response.find(response =>response.id ===Number(id)))
-    //       setIsLoading(false)
-    //   }, 2000)})
-    //     .catch(error => {
-    //         console.error(error)})
-    // }, [id])
     const getSelected = async(idItem) => {
       try {
   const document = doc(db, "Productos", idItem)

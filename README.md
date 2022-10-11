@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# DESPENSA PUNTO SUR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue creado con [Create React App](https://github.com/facebook/create-react-app) como desafio final para el curso de React js de CoderHouse.
+El mismo es un e-commerce de productos de almacen, donde en la pagina principal se pueden visualizar cada uno de los que se encuentran a la venta, mientras que en el NAV BAR se puede filtrar por categoria, al momento de seleccionar un producto se pueden ver mas datos como stock, descripcion, foto en mayor tamaño, botones para seleccionar cantidad y agregar al carrito. Luego de agregar los productos deseados al carrito se solicitan los datos del comprador y se genera una orden de compra que se almacena en la base de datos, ademas de que se le muestra al usuario el numero de la misma. Tambien inclui un footer agradeciendo la visita y dejando links a redes sociales, como no tiene actualmente paginas en esas redes deje links a las paginas oficiales. 
 
-## Available Scripts
+## Herramientas incluidas en el proyecto
 
-In the project directory, you can run:
+Como base de datos para almacenar los productos y ordenes se utiliza [Firebase](https://firebase.google.com/) .
 
-### `npm start`
+Para mostrar al usuario cuando se agregan producto se utiliza [SweetAlert 2](https://sweetalert2.github.io/) .
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Iconos para carrito y redes de [React-icons](https://react-icons.github.io/react-icons).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Imagenes del proyecto
+#### 1
+[![1](https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/1.png?alt=media&token=243b72fe-43b1-4fde-84fe-b1918036d7d6 "1")](http://https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/1.png?alt=media&token=243b72fe-43b1-4fde-84fe-b1918036d7d6 "1")
+#### 2
+[![2](https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/2.png?alt=media&token=01afdb74-6d46-41bb-b505-0098fbe5aabf "2")](http://https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/2.png?alt=media&token=01afdb74-6d46-41bb-b505-0098fbe5aabf "2")
+#### 3
+[![3](https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/3.png?alt=media&token=bd8458e2-aa9c-44f7-a5c7-8ee793ed2561 "3")](http://https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/3.png?alt=media&token=bd8458e2-aa9c-44f7-a5c7-8ee793ed2561 "3")
+#### 4
+[![4](https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/4.png?alt=media&token=aa7e57f8-75e0-45a0-b8aa-3227ccd4b1f2 "4")](http://https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/4.png?alt=media&token=aa7e57f8-75e0-45a0-b8aa-3227ccd4b1f2 "4")
+#### 5
+[![5](https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/5.png?alt=media&token=19303036-58b2-4a59-abf7-9ead8f976872 "5")](http://https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/5.png?alt=media&token=19303036-58b2-4a59-abf7-9ead8f976872 "5")
+#### 6
+[![6](https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/6.png?alt=media&token=61448615-2823-4593-bb4c-1017daff3fba "6")](http://https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/6.png?alt=media&token=61448615-2823-4593-bb4c-1017daff3fba "6")
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## GIF del proyecto
+[GIF](https://firebasestorage.googleapis.com/v0/b/despensa-punto-sur.appspot.com/o/GIF.gif?alt=media&token=045d27cb-e4ff-4bbc-b52f-cfdf317122ce)

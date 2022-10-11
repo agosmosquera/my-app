@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 
 const CartView = () => {
+ 
     const { carrito, precioTotal, limpiar} = useContext(CarritoContext)
   if (carrito.length=== 0){
     return (
+      
         <h1> No hay productos agregados al carrito.{' '}
         <Link to="/">Ver todos los productos</Link>
         </h1>

@@ -12,8 +12,8 @@ export const ItemDetalle = (producto) => {
         swal( '¡Agregado al carrito!', 'Se han seleccionado ' + count + ' productos', 'success' )
       }
   return (
-    <div>
-        <div className="card bg-light mb-3" key={producto.id} style={{maxWidth: '15rem', margin: '5px'}}>
+    <div >
+        <div className="card bg-light mb-3" key={producto.id} style={{maxWidth: '15rem', margin: '3px'}}>
                                  <div className="card-header" >{producto.nombre}</div>
                                      <div className="card-body">
                                      <img src={producto.img} alt={producto.nombre} width="100%" height="200"/>
